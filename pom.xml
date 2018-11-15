@@ -29,8 +29,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<reporting>
-    	    <plugins>
+	<plugins>
               <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -69,9 +68,7 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
-       	   </plugins>
-
-      </reporting>
+       	  </plugins>
 	<profiles>
 		<profile>
 			<id>spring</id>
