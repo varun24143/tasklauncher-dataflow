@@ -68,7 +68,7 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
-       	</plugins>
+	</plugins>	
 	<profiles>
 		<profile>
 			<id>spring</id>
