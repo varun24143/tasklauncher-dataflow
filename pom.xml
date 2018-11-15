@@ -35,12 +35,12 @@
       			  	<groupId>org.jacoco</groupId>
     				<artifactId>jacoco-maven-plugin</artifactId>
     				<version>0.7.5.201505241946</version>
-    				<executions>
+    				<exclusions>
         <!--
             Prepares the property pointing to the JaCoCo runtime agent which
             is passed as VM argument when Maven the Surefire plugin is executed.
         -->
-        			    <execution>
+        			    <exclusion>
             				<id>pre-unit-test</id>
             				<goals>
                 			   <goal>prepare-agent</goal>
@@ -55,12 +55,12 @@
                 -->
                 			    <propertyName>surefireArgLine</propertyName>
             				</configuration>
-        			    </execution>
+        			    </exclusion>
         <!--
             Ensures that the code coverage report for unit tests is created after
             unit tests have been run.
         -->
-               			    <execution>
+               			    <exclusion>
             				<id>post-unit-test</id>
             				<phase>test</phase>
             				<goals>
@@ -72,8 +72,8 @@
                 <!-- Sets the output directory for the code coverage report. -->
                 			      <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
             				</configuration>
-        			    </execution>
-    				</executions>
+        			    </exclusion>
+    				</exclusions>
       		  </plugin>
 		  <plugin>
 			    <groupId>org.apache.maven.plugins</groupId>
